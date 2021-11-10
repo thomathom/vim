@@ -1,4 +1,8 @@
 ### Work in progress
+## for the vim notation, see: http://vimdoc.sourceforge.net/htmldoc/intro.html#key-notation
 
 # yank (copy) [y] whole document [%] into system clipboard [+]
 :%y+
+
+# comment out [#] a whole block (selected by Visual block mode) 
+<C-v> (+ select blocks/lines) + <S-i> + '#' + <Esc> 
