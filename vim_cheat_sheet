@@ -6,3 +6,6 @@
 
 # comment out [#] a whole block (selected by Visual block mode) 
 <C-v> (+ select blocks/lines) + <S-i> + '#' + <Esc> 
+
+# Unicode characters can be inserted by typing ctrl-vu followed by the 4 digit hexadecimal code. Example: ▸
+<C-v> + u + 25b8 
