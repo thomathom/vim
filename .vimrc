@@ -62,9 +62,14 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 let skip_defaults_vim=1
 
 
+"" Displaying special hidden characters (Tab, EndOfLine/CR, Trailing Spaces)
+" Tab: U+21E5 , CR: U+23CE , Space: U+2423 
+"set listchars=tab:▸\ ,eol:¬,trail:␣
+set list
+set listchars=tab:⇥\ ,eol:⏎,trail:␣
+
 "" Settings for editing YAML/YML files
 set foldcolumn=3 " zc foldclose // zo foldopen
-set listchars=tab:▸\ ,eol:¬,trail:.
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab cursorcolumn cursorline autoindent smartindent list
 autocmd FileType yml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab cursorcolumn cursorline autoindent smartindent list
