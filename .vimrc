@@ -64,9 +64,10 @@ let skip_defaults_vim=1
 
 "" Settings for editing YAML/YML files
 set foldcolumn=3 " zc foldclose // zo foldopen
+set listchars=tab:▸\ ,eol:¬,trail:.
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
-autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab cursorcolumn cursorline autoindent smartindent list listchars=tab:\|_,trail:.
-autocmd FileType yml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab cursorcolumn cursorline autoindent smartindent list listchars=tab:\|_,trail:.
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab cursorcolumn cursorline autoindent smartindent list
+autocmd FileType yml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab cursorcolumn cursorline autoindent smartindent list
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
